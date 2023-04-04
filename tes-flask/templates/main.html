@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>H8 Final Project Finza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+    <div class="hero">
+    <h1>Tarif Uber Regresi Linier OSL</h1>
+    <p></p>
+<body>
+    <div class="form">
+        <form action="{{ url_for('predict')}}" method="post">
+            <!-- 'penumpang','jam','hari','bulan','tahun','dayofweek','jarak_km'  --> 
+            <input type="text" name="penumpang" placeholder="Jumlah Penumpang" requireq="required">
+            <input type="text" name="jam" placeholder="Jam Transaksi" requireq="required">
+            <input type="text" name="hari" placeholder="tanggal Transaksi" requireq="required">
+            <input type="text" name="bulan" placeholder="Bulan Transaksi" requireq="required">
+            <input type="text" name="tahun" placeholder="Tahun Transaksi" requireq="required">
+            <input type="text" name="dayofweek" placeholder="Hari ke- dalam minggu" requireq="required">
+            <input type="text" name="jarak_km" placeholder="Jarak Tempuh" requireq="required">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <p class="message">{{ prediction_text }}</p>
+    <div>
+
+</body>
+    
+<footer class="footer">
+    <img src= "img/hacktiv8-logo.png" style="width:100%">
+    <p>Supported by <a href="https://www.hacktiv8.com/" target="_blank">Hacktiv8</a></p>
+  </footer>
+
+
+</html>
