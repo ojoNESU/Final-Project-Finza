@@ -18,5 +18,5 @@ def predict():
     features = [float(x) for x in request.form.values()]
     final_features = [np.array(features)]
     y_pred_OLS = OLS_model.predict(final_features)
-    hasil = []
-    return render_template('main.html',prediction_text=hasil[y_pred_OLS[0]])
+    
+    return render_template('main.html',prediction_text=y_pred_OLS[0])
